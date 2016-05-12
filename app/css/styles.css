@@ -21,7 +21,8 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 ul {
   text-decoration: none;
@@ -29,7 +30,8 @@ ul {
 
 /* Font Styles */
 a {
-  color: #1863A1; }
+  color: #1863A1;
+  text-decoration: none; }
 
 p {
   font-size: 18px;
@@ -47,9 +49,16 @@ p.time-stamp {
   font-weight: normal; }
 
 p.profile-text {
-  font-size: 12.86px;
-  line-height: 19.24px;
-  color: #4b4b4b; }
+  font-size: 14.5px;
+  line-height: 19.2px;
+  color: #4b4b4b;
+  padding: 0 0 8px 0; }
+
+p.footer-text {
+  color: #888;
+  font-family: 'Whitney';
+  font-size: 12.8px;
+  line-height: 24px; }
 
 h1.banner {
   font-size: 48px;
@@ -72,6 +81,12 @@ h1.blog-post-title {
   line-height: 42px;
   color: #222;
   margin: 0 0 16px 0; }
+
+h1.projects {
+  font-size: 19.2px;
+  font-weight: 600;
+  font-family: 'Egyptienne';
+  color: #4b4b4b; }
 
 /* Header Styles */
 .header {
@@ -107,20 +122,43 @@ h1.blog-post-title {
   .main-content .blog .time-stamp {
     padding: 0 0 8px 0;
     margin: 0 0 0 0; }
+  .main-content .bio hr {
+    display: block;
+    height: 5px;
+    border: 0;
+    border-top: 1px solid #e0e0e0; }
   .main-content .bio .pic {
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     margin: 0 0 19.2px 0; }
+    .main-content .bio .pic img {
+      border: 3px solid #fff;
+      border-radius: 3px; }
   .main-content .bio .desc {
     margin: 19.2px 0 0 0; }
   .main-content .bio .recent-projects {
     margin: 28px 0 0 0; }
+    .main-content .bio .recent-projects h1 {
+      padding-bottom: 4px; }
+    .main-content .bio .recent-projects h1, .main-content .bio .recent-projects li {
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: #fff 0 1px; }
     .main-content .bio .recent-projects li {
       display: flex;
       flex-flow: column nowrap; }
+      .main-content .bio .recent-projects li a {
+        padding: 6px 0 6px 0; }
+
+/* Make width extend horizontally beyond the wrapper */
+.extend-full {
+  margin-right: -3000px;
+  padding-right: 3000px;
+  margin-left: -3000px;
+  padding-left: 3000px; }
 
 /* Footer Styles */
-.footer {
-  padding: 24px 18px 24px 18px; }
+footer {
+  border-top: 1px solid #CCC;
+  padding: 13px 25px 13px 25px; }
 
 @media screen and (min-width: 768px) {
   /* Switch from Mobile to Desktop Layout */ }
