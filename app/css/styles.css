@@ -38,7 +38,7 @@ a {
   text-decoration: none; }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 24px;
   color: #222;
@@ -66,7 +66,7 @@ p.footer-text {
 
 h1.banner {
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 57px;
   color: #111;
   font-family: 'Egyptienne'; }
@@ -175,37 +175,77 @@ footer {
   margin: 0 0 30px 0; }
 
 @media screen and (min-width: 768px) {
-  /* Switch from Mobile to Desktop Layout */
+  /* Header Styles */
+  .header {
+    padding: 40px 35px 28px 35px; }
+    .header h1.banner {
+      font-size: 57.6px; }
+    .header h2.banner {
+      font-size: 19.2px;
+      margin: 4px 0 0 0; }
+  /* Navigation Styles */
+  .navigation {
+    padding: 8.5px 35px 8.5px 35px; }
+  /* Putting the bio section next to the blog */
   .main-content {
-    display: flex; }
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 15px 24px 35px; }
     .main-content .blog {
-      flex-basis: 68.619791666667; }
+      flex-basis: 68.619791666667%; }
     .main-content .bio {
-      flex-basis: 31.380208333333; }
+      flex-basis: 31.380208333333%;
+      padding: 0 0px 0px 30px; }
       .main-content .bio hr {
         display: none; }
       .main-content .bio .follow-me {
-        margin: 0 0; } }
+        margin: 0 0; }
+      .main-content .bio .pic {
+        width: 204px;
+        height: 204px;
+        margin: 0 0 19.2px 0; }
+        .main-content .bio .pic img {
+          width: 204px;
+          height: 204px; } }
 
 @media screen and (min-width: 992px) {
-  /* Fonts */
-  p {
-    font-size: 18.4px;
-    line-height: 27.6px; }
-  p.time-stamp {
-    font-size: 16.56px;
-    line-height: 27.6px; }
-  p.profile-text {
-    font-size: 14.72px;
-    line-height: 22.08px; }
-  h1.banner {
-    font-size: 71.76px;
-    line-height: 86px; }
-  h2.banner {
-    font-size: 23.92px;
-    line-height: 27.6px; }
-  h1.blog-post-title {
-    font-size: 40.48px;
-    line-height: 48.576px; }
+  body {
+    max-width: 1200px;
+    margin: 0 auto; }
+  /* Header Styles */
+  .header {
+    padding: 50px 55px 35px 55px; }
+    .header h1.banner {
+      font-size: 72px; }
+    .header h2.banner {
+      font-size: 24px;
+      margin: 15px 0 0 0; }
+  /* Navigation Styles */
   .navigation {
-    font-size: 16.56px; } }
+    padding: 7px 55px 7px 55px;
+    font-size: 26px; }
+  /* Main Content */
+  .main-content {
+    padding: 32px 0px 24px 55px; }
+    .main-content .blog {
+      padding: 0 0px 0 0; }
+    .main-content .bio {
+      padding: 0 15px 0px 80px; }
+      .main-content .bio .pic {
+        width: 252px;
+        height: 252px; }
+        .main-content .bio .pic img {
+          width: 252px;
+          height: 252px; }
+  /* Increasing Font Sizes */
+  p {
+    font-size: 20px;
+    line-height: 28px; }
+  p.time-stamp {
+    font-size: 17px; }
+  p.profile-text {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 5.5px 0; }
+  h1.blog-post-title {
+    font-size: 40px; } }
