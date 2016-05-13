@@ -29,24 +29,19 @@ myJsonpCallback = function(data){
             var title = tumblrData[i].title;
             var content = tumblrData[i].body;
             var timestamp = new Date(tumblrData[i].timestamp);    
-
-            // $(".tumblr-posts").append("<li><h3>" + title + "</h3><p>" + timeConverter(timestamp) + "</p>" + content + "</li>");
             $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><h1 class='blog-post-title'>" + title + "</h1>" + content + "</li>");
         }
         else if(typeOfPost == "photo") {
             var photoUrl = tumblrData[i].photos[0].alt_sizes[0].url;
             var imgCaption = tumblrData[i].caption;
             var timestamp = new Date(tumblrData[i].timestamp);
-            // $(".tumblr-posts").append("<li><img src='" + photoUrl + "'><p>" + timeConverter(timestamp) + "</p>" + imgCaption + "</li>");
             $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><img src='" + photoUrl + "'/>" + imgCaption + "</li>");
             }
-        i++;
-        clearTimeout(tumblrRequestTimeout);
+        clearTimeout(tumblrRequestTimeout);     
   }
-
 }
 
 // If the AJAX request fails, display an Error message
 var tumblrRequestTimeout = setTimeout(function() {
-$('.tumblr-posts').html("<li>Sorry about that! For some reason this site is down for right now.</li>");
+$('.tumblr-posts').html("<li>Sorry about that! For some reason the blog isn't working right now.</li>");
 }, 3000);
