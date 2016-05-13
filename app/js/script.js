@@ -9,7 +9,6 @@ $.ajax({
 
 //If the AJAX request succeeds, initiate the callback function myJsonpCallback
 myJsonpCallback = function(data){
-    var i = 0,
         tumblrData = data.response.posts;
 
         function timeConverter(timestamp){
@@ -24,24 +23,25 @@ myJsonpCallback = function(data){
             return time;
         }
 
-    while (i < 20) {
-    var typeOfPost = tumblrData[i].type;
-    if(typeOfPost == "text") {
-        var title = tumblrData[i].title;
-        var content = tumblrData[i].body;
-        var timestamp = new Date(tumblrData[i].timestamp);    
+    for (var i = 0; i < 20; i++) {
+        var typeOfPost = tumblrData[i].type;
+        if(typeOfPost == "text") {
+            var title = tumblrData[i].title;
+            var content = tumblrData[i].body;
+            var timestamp = new Date(tumblrData[i].timestamp);    
 
-        // $(".tumblr-posts").append("<li><h3>" + title + "</h3><p>" + timeConverter(timestamp) + "</p>" + content + "</li>");
-        $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><h1 class='blog-post-title'>" + title + "</h1>" + content + "</li>");
-    }
-    else if(typeOfPost == "photo") {
-        var photoUrl = tumblrData[i].photos[0].alt_sizes[0].url;
-        var imgCaption = tumblrData[i].caption;
-        var timestamp = new Date(tumblrData[i].timestamp);
-        $(".tumblr-posts").append("<li><img src='" + photoUrl + "'><p>" + timeConverter(timestamp) + "</p>" + imgCaption + "</li>");
+            // $(".tumblr-posts").append("<li><h3>" + title + "</h3><p>" + timeConverter(timestamp) + "</p>" + content + "</li>");
+            $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><h1 class='blog-post-title'>" + title + "</h1>" + content + "</li>");
         }
-    i++;
-    clearTimeout(tumblrRequestTimeout);
+        else if(typeOfPost == "photo") {
+            var photoUrl = tumblrData[i].photos[0].alt_sizes[0].url;
+            var imgCaption = tumblrData[i].caption;
+            var timestamp = new Date(tumblrData[i].timestamp);
+            // $(".tumblr-posts").append("<li><img src='" + photoUrl + "'><p>" + timeConverter(timestamp) + "</p>" + imgCaption + "</li>");
+            $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><img src='" + photoUrl + "'/>" + imgCaption + "</li>");
+            }
+        i++;
+        clearTimeout(tumblrRequestTimeout);
   }
 
 }
