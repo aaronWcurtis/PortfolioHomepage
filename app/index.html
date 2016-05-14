@@ -74,7 +74,21 @@
     <footer class="footer">
         <p class="footer-text">Aaron Curtis | Copyright &copy; 2016</p>
     </footer>
-    <!-- Javascript: jQuery & Custom JS for Site -->
+    <!-- Javascript: Templates, jQuery, Custom JS for Site -->
+    <script type="text/template" data-template="textBlog">
+        <li>
+            <p class="time-stamp">{{blogTime}}</p>
+            <h1 class="blog-post-title">{{blogTitle}}</h1>
+            {{blogText}}
+        </li>
+    </script>
+    <script type="text/template" data-template="photoBlog">
+        <li>
+            <p class="time-stamp">{{blogTime}}</p>
+            <img src="{{photoURL}}">
+            {{photoText}}
+        </li>
+    </script>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script> 
     <script>if (!window.jQuery) { document.write('<script src="jquery.min.js"><\/script>'); }</script>
     <script type="text/javascript" src="js/script.js"></script>

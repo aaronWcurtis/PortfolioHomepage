@@ -24,18 +24,32 @@ myJsonpCallback = function(data){
         }
 
     for (var i = 0; i < 20; i++) {
-        var typeOfPost = tumblrData[i].type;
-        if(typeOfPost == "text") {
+        var postType = tumblrData[i].type;
+        var blogPosts = $('.tumblr-posts');
+        var textBlogTemplate = $('script[data-template="textBlog"]').html();
+        var photoBlogTemplate = $('script[data-template="photoBlog"]').html();
+        
+        if(postType == "text") {
             var title = tumblrData[i].title;
             var content = tumblrData[i].body;
             var timestamp = new Date(tumblrData[i].timestamp);    
-            $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><h1 class='blog-post-title'>" + title + "</h1>" + content + "</li>");
+            // Replace template text with text from Tumblr's API
+            var aTextPost = textBlogTemplate
+                .replace(/{{blogTime}}/g, timeConverter(timestamp))
+                .replace(/{{blogTitle}}/g, title)
+                .replace(/{{blogText}}/g, content)
+            blogPosts.append(aTextPost);
         }
-        else if(typeOfPost == "photo") {
+        else if(postType == "photo") {
             var photoUrl = tumblrData[i].photos[0].alt_sizes[0].url;
             var imgCaption = tumblrData[i].caption;
             var timestamp = new Date(tumblrData[i].timestamp);
-            $(".tumblr-posts").append("<li><p class='time-stamp'>" + timeConverter(timestamp) + "</p><img src='" + photoUrl + "'/>" + imgCaption + "</li>");
+            // Replace template text with pic from Tumblr's API
+            var aPhotoPost = photoBlogTemplate
+                .replace(/{{blogTime}}/g, timeConverter(timestamp))
+                .replace(/{{photoURL}}/g, photoUrl)
+                .replace(/{{photoText}}/g, imgCaption)
+            blogPosts.append(aPhotoPost);
             }
         clearTimeout(tumblrRequestTimeout);     
   }
