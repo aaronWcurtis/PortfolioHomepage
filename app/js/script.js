@@ -1,9 +1,8 @@
 // Request Data from Tumblr's API
 $.ajax({
-    url : "http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts",
+    url : "http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts?api_key=Z5RR44JOSi3dypBkd0ZQL0WR0BsjbUTf6yW7AMzahWirR84vTH",
     dataType: "jsonp",
     data: {
-        api_key : "Z5RR44JOSi3dypBkd0ZQL0WR0BsjbUTf6yW7AMzahWirR84vTH",
         jsonp : "myJsonpCallback"}
 });
 
