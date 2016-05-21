@@ -57,6 +57,7 @@ myJsonpCallback = function(data){
   }
 }
 });
+
 // If the AJAX request fails, display an Error message
 var tumblrRequestTimeout = setTimeout(function() {
 $('.tumblr-posts').html("<li>Sorry about that! For some reason the blog isn't working right now.</li>");
