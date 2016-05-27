@@ -1,12 +1,10 @@
-$.get('config.php', function(data) {
-    var apiKey = data; 
-    var url = 'http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts?api_key=' +apiKey;
+// Request Data from Tumblr's API
 $.ajax({
-    url : url,
+    url : "http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts",
     dataType: "jsonp",
     data: {
-        jsonp : "myJsonpCallback"       
-    }
+        api_key : "Z5RR44JOSi3dypBkd0ZQL0WR0BsjbUTf6yW7AMzahWirR84vTH",
+        jsonp : "myJsonpCallback"}
 });
 
 //If the AJAX request succeeds, initiate the callback function myJsonpCallback
@@ -56,7 +54,7 @@ myJsonpCallback = function(data){
         clearTimeout(tumblrRequestTimeout);     
   }
 }
-});
+
 // If the AJAX request fails, display an Error message
 var tumblrRequestTimeout = setTimeout(function() {
 $('.tumblr-posts').html("<li>Sorry about that! For some reason the blog isn't working right now.</li>");
