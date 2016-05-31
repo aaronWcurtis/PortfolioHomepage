@@ -10,7 +10,7 @@
   font-family: 'Mercury'
   src: url(/fonts/MercuryMF.otf)
 
-/* General Styles*/
+/* General Styles */
 *
 	margin: 0
 	padding: 0
@@ -32,7 +32,7 @@ ul
 img
 	border-radius: 3px
 
-/* Font Styles */ 
+/* Font Styles */
 a
 	color: #1863A1
 	text-decoration: none
@@ -57,7 +57,7 @@ p.profile-text
 p.footer-text
 	color: #888
 	font-family: 'Whitney'
-	font-size: 12.8px 
+	font-size: 12.8px
 	line-height: 24px
 
 h1.banner
@@ -85,55 +85,54 @@ h1.projects
 	font-family: 'Egyptienne'
 	color: #4b4b4b
 /* Header Styles */
-.header 
+.header
 	padding: 26px 18px 25px 18px
 	margin: 0 0 0 0px
 
 /* Navigation Styles */
-.navigation 
+.navigation
 	border-top: 1px solid #CCC
 	border-bottom: 1px solid #CCC
 	padding: 8.5px 18px 8.5px 18px
 	font-size: 20px
-	ul 
+	ul
 		display: flex
 		justify-content: flex-start
-		li 
+		li
 			padding-right: 10px
 
 /* Main Content Styles */
 .main-content
 	padding: 32px 18px 24px 18px
 	/* Blog Styles */
-	.blog 
+	.blog
 		li
-			padding: 32px 0 0 0 
+			padding: 32px 0 0 0
 			margin: 0 0 15px 0
 			background: url('/images/dots1.png') top left repeat-x
 			&:first-of-type
 				background: none
 				padding: 0 0 0 0
-			p 
+			p
 				margin: 0 0 24px 0
 		.time-stamp
 			padding: 0 0 8px 0
 			margin: 0 0 0 0
 		img
 			margin: 15px 0 15px 0
-
 	/* Bio Styles */
 	.bio
 		hr
 			display: block
 			height: 5px
 			border: 0
-			border-top: 1px solid #e0e0e0 
+			border-top: 1px solid #e0e0e0
 		.pic
 			padding: 5px 0 0 0
 			margin: 0 auto 19.2px auto
 			width: 260px
 			height: 260px
-			img 
+			img
 				width: 260px
 				height: 260px
 				border: 3px solid #fff
@@ -153,9 +152,9 @@ h1.projects
 			li
 				display: flex
 				flex-flow: column nowrap
-				a 
+				a
 					padding: 6px 0 6px 0
-		
+
 /* Make width extend horizontally beyond the wrapper */
 .extend-full
 	margin-right: -3000px
@@ -169,10 +168,15 @@ footer
 	padding: 13px 25px 13px 25px
 	margin: 0 0 30px 0
 
+@media screen and (min-width: 400px)
+  /* Make blog reappear on tablets and desktops */
+  .main-content
+    .blog
+      display: block !important
 
 @media screen and (min-width: 768px)
 	/* Header Styles */
-	.header 
+	.header
 		padding: 40px 35px 28px 35px
 		h1.banner
 			font-size: 57.6px
@@ -180,7 +184,7 @@ footer
 			font-size: 19.2px
 			margin: 4px 0 0 0
 	/* Navigation Styles */
-	.navigation 
+	.navigation
 		padding: 8.5px 35px 8.5px 35px
 	/* Putting the bio section next to the blog */
 	.main-content
@@ -193,7 +197,7 @@ footer
 			flex-basis: 31.380208333333%
 			padding: 0 0px 0px 30px
 			hr
-				display: none 
+				display: none
 			.follow-me
 				margin: 0 0
 			.pic
@@ -208,19 +212,19 @@ footer
 		max-width: 1200px
 		margin: 0 auto
 	/* Header Styles */
-	.header 
+	.header
 		padding: 50px 55px 35px 55px
 		h1.banner
 			font-size: 72px
 		h2.banner
 			font-size: 24px
 			margin: 15px 0 0 0
-	
+
 	/* Navigation Styles */
-	.navigation 
+	.navigation
 		padding: 7px 55px 7px 55px
 		font-size: 26px
-	
+
 	/* Main Content */
 	.main-content
 		padding: 32px 0px 24px 55px
@@ -234,9 +238,9 @@ footer
 				img
 					width: 252px
 					height: 252px
-	
+
 	/* Increasing Font Sizes */
-	p 
+	p
 		font-size: 20px
 		line-height: 28px
 	p.time-stamp
@@ -247,5 +251,3 @@ footer
 		margin: 0 0 5.5px 0
 	h1.blog-post-title
 		font-size: 40px
-
-

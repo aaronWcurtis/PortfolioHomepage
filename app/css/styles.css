@@ -10,7 +10,7 @@
   font-family: 'Mercury';
   src: url(/fonts/MercuryMF.otf); }
 
-/* General Styles*/
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -173,6 +173,11 @@ footer {
   border-top: 1px solid #CCC;
   padding: 13px 25px 13px 25px;
   margin: 0 0 30px 0; }
+
+@media screen and (min-width: 400px) {
+  /* Make blog reappear on tablets and desktops */
+  .main-content .blog {
+    display: block !important; } }
 
 @media screen and (min-width: 768px) {
   /* Header Styles */
