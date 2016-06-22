@@ -1,3 +1,18 @@
+// Toggle Projects
+$(function() {
+    $(".expand").on( "click", function() {
+        $(this).next().slideToggle();
+        // $expand = $(this).find(">:first-child");
+        $expand = $(this).find(">:nth-child(2)");
+
+        if($expand.text() === "+") {
+            $expand.text("-");
+        } else {
+            $expand.text("+");
+        }
+    });
+});
+
 // Request Data from Tumblr's API
 $.ajax({
     url : "http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts",

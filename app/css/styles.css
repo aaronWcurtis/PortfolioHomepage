@@ -10,7 +10,9 @@
   font-family: 'Mercury';
   src: url(/fonts/MercuryMF.otf); }
 
+/*----------------*/
 /* General Styles */
+/*----------------*/
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +34,9 @@ ul {
 img {
   border-radius: 3px; }
 
+/*-------------*/
 /* Font Styles */
+/*-------------*/
 a {
   color: #1863A1;
   text-decoration: none; }
@@ -90,9 +94,18 @@ h1.projects {
   font-size: 19.2px;
   font-weight: 600;
   font-family: 'Egyptienne';
+  color: #4b4b4b;
+  text-align: center; }
+
+h4.projects {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Egyptienne';
   color: #4b4b4b; }
 
+/*---------------*/
 /* Header Styles */
+/*---------------*/
 .header {
   padding: 26px 18px 25px 18px;
   margin: 0 0 0 0px; }
@@ -109,11 +122,15 @@ h1.projects {
     .navigation ul li {
       padding-right: 10px; }
 
+/*---------------------*/
 /* Main Content Styles */
+/*---------------------*/
 .main-content {
   padding: 32px 18px 24px 18px;
   /* Blog Styles */
-  /* Bio Styles */ }
+  /* -----------*/
+  /* Bio Styles */
+  /* -----------*/ }
   .main-content .blog li {
     padding: 32px 0 0 0;
     margin: 0 0 15px 0;
@@ -160,6 +177,25 @@ h1.projects {
       flex-flow: column nowrap; }
       .main-content .bio .recent-projects li a {
         padding: 6px 0 6px 0; }
+    .main-content .bio .recent-projects #toggleProjects {
+      width: 250px;
+      display: block; }
+      .main-content .bio .recent-projects #toggleProjects .expand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .main-content .bio .recent-projects #toggleProjects .right-arrow {
+        font-weight: bold;
+        font-size: 20px;
+        color: #4b4b4b; }
+      .main-content .bio .recent-projects #toggleProjects .detail {
+        display: block;
+        line-height: 22px;
+        padding: 0;
+        margin: 0; }
+      .main-content .bio .recent-projects #toggleProjects .dropdown-list li:first-child {
+        border-top: 1px solid #e0e0e0;
+        box-shadow: #fff 0 1px; }
 
 /* Make width extend horizontally beyond the wrapper */
 .extend-full {
