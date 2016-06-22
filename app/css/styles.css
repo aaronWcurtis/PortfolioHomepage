@@ -168,7 +168,7 @@ h4.projects {
   .main-content .bio .recent-projects {
     margin: 28px 0 0 0; }
     .main-content .bio .recent-projects h1 {
-      padding-bottom: 4px; }
+      padding-bottom: 10px; }
     .main-content .bio .recent-projects h1, .main-content .bio .recent-projects li {
       border-bottom: 1px solid #e0e0e0;
       box-shadow: #fff 0 1px; }
@@ -178,24 +178,34 @@ h4.projects {
       .main-content .bio .recent-projects li a {
         padding: 6px 0 6px 0; }
     .main-content .bio .recent-projects #toggleProjects {
-      width: 250px;
       display: block; }
       .main-content .bio .recent-projects #toggleProjects .expand {
         display: flex;
-        justify-content: space-between;
-        align-items: center; }
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        height: 26px; }
+        .main-content .bio .recent-projects #toggleProjects .expand:hover {
+          background: #efefef; }
       .main-content .bio .recent-projects #toggleProjects .right-arrow {
         font-weight: bold;
         font-size: 20px;
-        color: #4b4b4b; }
+        color: #4b4b4b;
+        margin: -2px 5px 0 0; }
       .main-content .bio .recent-projects #toggleProjects .detail {
-        display: block;
+        display: none;
         line-height: 22px;
         padding: 0;
         margin: 0; }
-      .main-content .bio .recent-projects #toggleProjects .dropdown-list li:first-child {
-        border-top: 1px solid #e0e0e0;
-        box-shadow: #fff 0 1px; }
+        .main-content .bio .recent-projects #toggleProjects .detail:first-of-type {
+          display: block; }
+      .main-content .bio .recent-projects #toggleProjects .dropdown-list li {
+        text-indent: 18px; }
+        .main-content .bio .recent-projects #toggleProjects .dropdown-list li:first-child {
+          border-top: 1px solid #e0e0e0;
+          box-shadow: #fff 0 1px; }
+        .main-content .bio .recent-projects #toggleProjects .dropdown-list li:hover {
+          background: #efefef; }
 
 /* Make width extend horizontally beyond the wrapper */
 .extend-full {

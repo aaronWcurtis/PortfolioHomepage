@@ -2,12 +2,12 @@
 $(function() {
     $(".expand").on( "click", function() {
         $(this).next().slideToggle();
-        // $expand = $(this).find(">:first-child");
-        $expand = $(this).find(">:nth-child(2)");
+        $expand = $(this).find(">:first-child");
 
         if($expand.text() === "+") {
             $expand.text("-");
-        } else {
+        } else if ($expand.text() === '-')
+        {
             $expand.text("+");
         }
     });

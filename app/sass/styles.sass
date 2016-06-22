@@ -162,7 +162,7 @@ h4.projects
 		.recent-projects
 			margin: 28px 0 0 0
 			h1
-				padding-bottom: 4px
+				padding-bottom: 10px
 			h1, li
 				border-bottom: 1px solid #e0e0e0
 				box-shadow: #fff 0 1px
@@ -172,26 +172,36 @@ h4.projects
 				a
 					padding: 6px 0 6px 0
 			#toggleProjects
-				width: 250px
 				display: block
 				.expand
 					display: flex
-					justify-content: space-between
+					justify-content: flex-start
 					align-items: center
+					cursor: pointer
+					height: 26px
+					&:hover
+						background: #efefef
 				.right-arrow
 					font-weight: bold
 					font-size: 20px
 					color: #4b4b4b
+					margin: -2px 5px 0 0
 				.detail
-					display: block
+				    display: none
 					line-height: 22px
 					padding: 0
 					margin: 0
+					&:first-of-type
+					    display: block
+
 				.dropdown-list
 					li
+						text-indent: 18px
 						&:first-child
 							border-top: 1px solid #e0e0e0
 							box-shadow: #fff 0 1px
+						&:hover
+							background: #efefef
 
 /* Make width extend horizontally beyond the wrapper */
 .extend-full
