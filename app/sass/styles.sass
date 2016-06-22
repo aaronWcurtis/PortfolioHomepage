@@ -1,14 +1,16 @@
 @font-face
   font-family: 'Egyptienne'
-  src: url(/fonts/Egyptienne.otf)
+  src: url(./../fonts/Egyptienne.otf)
 
 @font-face
   font-family: 'Whitney'
-  src: url(/fonts/Whitney.otf)
+  src: url(./../fonts/Whitney.otf)
 
 @font-face
   font-family: 'Mercury'
-  src: url(/fonts/MercuryMF.otf)
+  src: url(./../fonts/MercuryMF.otf)
+
+$base-font: 'Egyptienne', Helvetica, Sans-serif
 
 /*----------------*/
 /* General Styles */
@@ -19,7 +21,7 @@
 	box-sizing: border-box
 
 html
-	background: #f8f8f8 url('/images/static-bg.png') top left
+	background: #f8f8f8 url('./../images/static-bg.png') top left
 	-webkit-font-smoothing: antialiased
 	overflow-x: hidden
 
@@ -69,15 +71,15 @@ h1.banner
 	font-weight: 600
 	line-height: 57px
 	color: #111
-	font-family: 'Egyptienne'
+	font-family: $base-font
 h2.banner
 	font-size: 16px
 	line-height: 24px
 	color: #333
-	font-family: 'Egyptienne'
+	font-family: $base-font
 	font-weight: 300
 h1.blog-post-title
-	font-family: 'Egyptienne'
+	font-family: $base-font
 	font-size: 35px
 	font-weight: 500
 	line-height: 42px
@@ -86,20 +88,21 @@ h1.blog-post-title
 h1.projects
 	font-size: 19.2px
 	font-weight: 600
-	font-family: 'Egyptienne'
+	font-family: $base-font
 	color: #4b4b4b
 	text-align: center
 h4.projects
-	font-size: 16px
+	font-size: 18px
 	font-weight: 600
-	font-family: 'Egyptienne'
+	font-family: $base-font
 	color: #4b4b4b
+
 /*---------------*/
 /* Header Styles */
 /*---------------*/
 .header
 	padding: 26px 18px 25px 18px
-	margin: 0 0 0 0px
+	margin: 0 0 0 0
 
 /* Navigation Styles */
 .navigation
@@ -118,12 +121,11 @@ h4.projects
 /*---------------------*/
 .main-content
 	padding: 32px 18px 24px 18px
-	/* Blog Styles */
 	.blog
 		li
 			padding: 32px 0 0 0
 			margin: 0 0 15px 0
-			background: url('/images/dots1.png') top left repeat-x
+			background: url('./../images/dots1.png') top left repeat-x
 			&:first-of-type
 				background: none
 				padding: 0 0 0 0
@@ -134,16 +136,12 @@ h4.projects
 			margin: 0 0 0 0
 		img
 			margin: 15px 0 15px 0
-
-	/* -----------*/
 	/* Bio Styles */
-	/* -----------*/
 	.bio
 		hr
 			display: block
 			height: 5px
 			border: 0
-			border-top: 1px solid #e0e0e0
 		.pic
 			padding: 5px 0 0 0
 			margin: 0 auto 19.2px auto
@@ -186,14 +184,6 @@ h4.projects
 					font-size: 20px
 					color: #4b4b4b
 					margin: -2px 5px 0 0
-				.detail
-				    display: none
-					line-height: 22px
-					padding: 0
-					margin: 0
-					&:first-of-type
-					    display: block
-
 				.dropdown-list
 					li
 						text-indent: 18px
@@ -220,7 +210,10 @@ footer
   /* Make blog reappear on tablets and desktops */
   .main-content
     .blog
-      display: block !important
+        display: block !important
+    .bio
+        hr
+            border-top: 1px solid #e0e0e0
 
 @media screen and (min-width: 768px)
 	/* Header Styles */
@@ -243,7 +236,7 @@ footer
 			flex-basis: 68.619791666667%
 		.bio
 			flex-basis: 31.380208333333%
-			padding: 0 0px 0px 30px
+			padding: 0 0 0 30px
 			hr
 				display: none
 			.follow-me
@@ -275,11 +268,11 @@ footer
 
 	/* Main Content */
 	.main-content
-		padding: 32px 0px 24px 55px
+		padding: 32px 0 24px 55px
 		.blog
-			padding: 0 0px 0 0
+			padding: 0 0 0 0
 		.bio
-			padding: 0 15px 0px 80px
+			padding: 0 15px 0 80px
 			.pic
 				width: 252px
 				height: 252px

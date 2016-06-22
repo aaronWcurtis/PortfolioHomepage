@@ -4,3 +4,4 @@ playground.html
 app/css/playground.css
 app/css/playground.min.css
 app/sass/playground.sass
+node_modules
