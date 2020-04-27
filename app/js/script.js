@@ -18,7 +18,7 @@ $.ajax({
     url : "http://api.tumblr.com/v2/blog/aaronwcurtis.tumblr.com/posts",
     dataType: "jsonp",
     data: {
-        api_key : "Z5RR44JOSi3dypBkd0ZQL0WR0BsjbUTf6yW7AMzahWirR84vTH",
+        api_key : "---------------------------------------------------",
         jsonp : "myJsonpCallback"}
 });
 
